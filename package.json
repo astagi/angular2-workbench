@@ -1,0 +1,49 @@
+{
+  "name": "lcdchar",
+  "version": "0.0.0",
+  "description": "Create custom chars for LCD displays! Built on top of AngularJS 2",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:astagi/lcdchar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/astagi/lcdchar/issues"
+  },
+  "scripts": {
+    "start": "http-server -c-1 -o -p 8875 .",
+    "build": "rm -rf dist && tsc -p src",
+    "pretest": "npm run build",
+    "test": "karma start karma.conf.js",
+    "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
+  },
+  "homepage": "https://github.com/astagi/lcdchar",
+  "devDependencies": {
+    "connect": "^3.4.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-typescript": "^2.8.0",
+    "open": "0.0.5",
+    "serve-static": "^1.10.0",
+    "http-server": "0.8.5",
+    "jasmine-core": "2.4.1",
+    "karma": "0.13.19",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-coverage": "0.5.3",
+    "karma-jasmine": "0.3.6",
+    "remap-istanbul": "0.5.1",
+    "systemjs": "0.19.17",
+    "typescript": "1.7.5",
+    "jasmine": "^2.4.1"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.3",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.33.13",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "0.19.2",
+    "typescript": "1.7.5",
+    "zone.js": "0.5.11"
+  }
+}
