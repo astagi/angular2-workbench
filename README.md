@@ -1,6 +1,17 @@
 # Angular 2 workbench
 
-Workbench for Angular 2, including experiments with components, pipes and services, testing and much more stuff
+Workbench for Angular 2, including experiments with
+
+- custom components
+- custom pipes
+- custom services
+- routing
+- http requests
+- testing
+
+and much more..
+
+WARNING: this is a non-sense app, elements are taken from different projects.
 
 ## Install
 
