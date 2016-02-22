@@ -15,7 +15,9 @@ WARNING: this is a non-sense app, elements are taken from different projects.
 
 ## Install
 
+    $ npm install typings --global
     $ npm install
+    $ typings instal
 
 ## Run
 
