@@ -30,6 +30,7 @@ WARNING: this is a non-sense app, elements are taken from different projects.
 ## Resources
 
 - https://auth0.com/blog/2015/10/15/angular-2-series-part-3-using-http/
+- https://auth0.com/blog/2016/01/25/angular-2-series-part-4-component-router-in-depth/
 - http://www.cantierecreativo.net/blog/2015/01/14/amd-requirejs-commonjs-browserify/
 - http://www.yearofmoo.com/2016/02/rendering-in-angular2.html
 - http://blog.scottlogic.com/2015/12/24/creating-an-angular-2-build.html

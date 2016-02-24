@@ -6,7 +6,7 @@ import {Pixel} from '../models/pixel';
 
 
 @Component({
-  selector: 'lcdchar-app',
+  selector: 'lcdchar',
   directives: [PixelSwitch, YouTubeMp3],
   pipes: [NotPipe],
   template: `
@@ -15,6 +15,6 @@ import {Pixel} from '../models/pixel';
     <youtubemp3></youtubemp3>
   `
 })
-export class LcdCharApp {
+export class LcdChar {
   pixels: Pixel[] = [new Pixel(false), new Pixel(false), new Pixel(false)];
 }

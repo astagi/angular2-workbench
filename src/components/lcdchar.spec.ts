@@ -2,14 +2,14 @@
 
 
 import {it, describe, expect, beforeEach, inject} from 'angular2/testing';
-import {LcdCharApp} from './lcdchar';
+import {LcdChar} from './lcdchar';
 
-describe('LcdCharApp', () => {
+describe('LcdChar', () => {
 
-  let app: LcdCharApp;
+    let app: LcdChar;
 
   beforeEach(function() {
-    app = new LcdCharApp();
+      app = new LcdChar();
   });
 
   it('should have name property', function() {
