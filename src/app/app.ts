@@ -3,10 +3,13 @@ import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';
 import {Component} from 'angular2/core';
 import {Home} from './home';
 import {LcdChar} from '../components/lcdchar';
+import {Search} from '../components/search';
+
 
 @RouteConfig([
   { path: '/home', component: Home, name: 'Home', useAsDefault: true },
   { path: '/lcd', component: LcdChar, name: 'Lcd' },
+  { path: '/search', component: Search, name: 'Search' },
   { path: '/**', redirectTo: ['Home'] }
 ])
 @Component({
@@ -15,6 +18,7 @@ import {LcdChar} from '../components/lcdchar';
   template: `
     <a [routerLink]="['Home']">Home</a>
     <a [routerLink]="['Lcd']">Lcd</a>
+    <a [routerLink]="['Search']">Search</a>
     <div id="main" class="col-sm-9">
       <router-outlet></router-outlet>
     </div>

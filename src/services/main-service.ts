@@ -11,11 +11,18 @@ export class MainService {
 
   private _serviceUrl = 'http://www.youtubeinmp3.com/fetch/?format=JSON&video=';
 
+  getFakeElements(query: string) {
+    return new Observable(observer =>
+          observer.next(['Element 1', 'Element 2', 'Element 3'])).share();
+
+  }
+
   getMusicLink(videoUrl: string) {
     return this.http.get(this._serviceUrl + videoUrl)
       .map(res => res.text())
       .catch(this.handleError);
   }
+
   private handleError(error: Response) {
     console.error(error);
     return Observable.throw(error.json().error || 'Server error');
