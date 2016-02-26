@@ -1,9 +1,9 @@
 import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';
 
 import {Component} from 'angular2/core';
-import {Home} from './home';
-import {LcdChar} from '../components/lcdchar';
-import {Search} from '../components/search';
+import {Home} from '../views/home';
+import {LcdChar} from '../views/lcdchar';
+import {Search} from '../views/search';
 
 
 @RouteConfig([
