@@ -4,10 +4,7 @@ import {MainService} from '../services/main-service';
 
 @Component({
   selector: 'youtubemp3',
-  template: `
-    <input #videoUrl (keyup)="getMusicLink(videoUrl.value)">
-    <div>{{musicUrl}}</div>
-  `,
+  templateUrl: '/partials/components/youtubemp3.html',
   providers: [MainService]
 })
 export class YouTubeMp3 {

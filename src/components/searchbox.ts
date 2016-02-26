@@ -8,10 +8,7 @@ import {HostBinding, Component, Output, EventEmitter, Inject} from 'angular2/cor
 
 @Component({
   selector: 'searchbox',
-  template: `
-    <input [value]="value" type="text" (input)="search($event.target.value)"/>
-    <span (click)="reset()">X</span>
-  `
+  templateUrl: '/partials/components/searchbox.html'
 })
 export class SearchBox {
 

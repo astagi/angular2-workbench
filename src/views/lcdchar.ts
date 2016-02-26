@@ -9,11 +9,8 @@ import {Pixel} from '../models/pixel';
   selector: 'lcdchar',
   directives: [PixelSwitch, YouTubeMp3],
   pipes: [NotPipe],
-  template: `
-    <pixel-switch *ngFor="#pixel of pixels" [pixel]="pixel"></pixel-switch>
-    <div *ngFor="#pixel of pixels">{{pixel.value | not}}</div>
-    <youtubemp3></youtubemp3>
-  `
+  templateUrl: '/partials/views/lcdchar.html'
+
 })
 export class LcdChar {
   pixels: Pixel[] = [new Pixel(false), new Pixel(false), new Pixel(false)];

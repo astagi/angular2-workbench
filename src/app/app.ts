@@ -15,14 +15,7 @@ import {Search} from '../views/search';
 @Component({
   selector: 'app',
   directives: [ ROUTER_DIRECTIVES ],
-  template: `
-    <a [routerLink]="['Home']">Home</a>
-    <a [routerLink]="['Lcd']">Lcd</a>
-    <a [routerLink]="['Search']">Search</a>
-    <div id="main" class="col-sm-9">
-      <router-outlet></router-outlet>
-    </div>
-  `
+  templateUrl: '/partials/app.html'
 })
 export class App {
 

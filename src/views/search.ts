@@ -5,10 +5,7 @@ import {SearchBox} from '../components/searchbox';
 
 @Component({
   selector: 'search',
-  template: `
-    <searchbox #sb (change)="search(sb.value)"></searchbox>
-    <div *ngFor="#element of elements">{{element}}</div>
-  `,
+  templateUrl: '/partials/views/search.html',
   directives: [SearchBox],
   providers: [MainService]
 

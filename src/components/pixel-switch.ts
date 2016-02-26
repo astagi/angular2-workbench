@@ -4,9 +4,8 @@ import {Pixel} from '../models/pixel';
 
 @Component({
   selector: 'pixel-switch',
-  template: `
-    <span (click)="toggle()">{{pixel.value ? '1' : '0'}}</span>
-  `
+  templateUrl: '/partials/components/pixel-switch.html'
+
 })
 export class PixelSwitch {
   @Input() pixel: Pixel;
