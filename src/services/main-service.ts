@@ -13,7 +13,7 @@ export class MainService {
 
   getFakeElements(query: string) {
     return new Observable(observer =>
-          observer.next(['Element 1', 'Element 2', 'Element 3'])).share();
+          observer.next(['Query: ' + query, 'Element 1', 'Element 2', 'Element 3'])).share();
 
   }
 
