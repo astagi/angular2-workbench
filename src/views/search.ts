@@ -1,13 +1,15 @@
 import {Component, Output, EventEmitter, Inject} from 'angular2/core';
 import {MainService} from '../services/main-service';
+import {SearchBox} from '../components/searchbox';
 
 
 @Component({
   selector: 'search',
   template: `
-    <input type="text" #searchtext (keyup)="search(searchtext.value)"/>
+    <searchbox #sb (change)="search(sb.value)"></searchbox>
     <div *ngFor="#element of elements">{{element}}</div>
   `,
+  directives: [SearchBox],
   providers: [MainService]
 
 })

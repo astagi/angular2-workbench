@@ -29,6 +29,9 @@ WARNING: this is a non-sense app, elements are taken from different projects.
 
 ## Resources
 
+- http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html
+- http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2
+- http://www.syntaxsuccess.com/viewarticle/angular-2.0-input-values-and-binding
 - https://auth0.com/blog/2015/10/15/angular-2-series-part-3-using-http/
 - https://auth0.com/blog/2016/01/25/angular-2-series-part-4-component-router-in-depth/
 - http://www.cantierecreativo.net/blog/2015/01/14/amd-requirejs-commonjs-browserify/
