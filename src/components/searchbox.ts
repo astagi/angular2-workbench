@@ -4,11 +4,13 @@ http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystifi
 */
 
 import {HostBinding, Component, Output, EventEmitter, Inject} from 'angular2/core';
+import {FocusMe} from '../directives/focus-me';
 
 
 @Component({
   selector: 'searchbox',
-  templateUrl: '/partials/components/searchbox.html'
+  templateUrl: '/partials/components/searchbox.html',
+  directives: [FocusMe]
 })
 export class SearchBox {
 
