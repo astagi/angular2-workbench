@@ -3,8 +3,9 @@
 Workbench for Angular 2, including experiments with
 
 - custom components
-- custom pipes
+- custom directives
 - custom services
+- custom pipes
 - routing
 - http requests
 - testing
@@ -17,7 +18,7 @@ WARNING: this is a non-sense app, elements are taken from different projects.
 
     $ npm install typings --global
     $ npm install
-    $ typings instal
+    $ typings install
 
 ## Run
 
