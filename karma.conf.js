@@ -20,13 +20,16 @@ module.exports = function(config) {
 
             // paths to support debugging with source maps in dev tools
             {pattern: 'src/**/*.ts', included: false, watched: false},
-            {pattern: 'dist/**/*.js.map', included: false, watched: false}
+            {pattern: 'dist/**/*.js.map', included: false, watched: false},
+
+            {pattern: 'partials/**/*.html', included: true, watched: true},
         ],
 
         // proxied base paths
         proxies: {
             // required for component assests fetched by Angular's compiler
-            '/src/': '/base/src/'
+            '/src/': '/base/src/',
+            '/partials/': '/base/partials/',
         },
 
         port: 9876,
