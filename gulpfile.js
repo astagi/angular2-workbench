@@ -1,5 +1,11 @@
 var gulp = require('gulp');
 var karma = require('karma').server;
+var sourcemaps = require('gulp-sourcemaps');
+var remapIstanbul = require('remap-istanbul/lib/gulpRemapIstanbul');
+var exec = require('child_process').exec;
+
+
+var remapCmd = 'node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html'
 
 var PATHS = {
     src: 'src/**/*.ts'
@@ -17,15 +23,26 @@ gulp.task('test', ['ts2js'], function(done) {
     });
 });
 
+gulp.task('html-cov', function (cb) {
+    exec(remapCmd, function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
+
 gulp.task('ts2js', ['clean'], function () {
     var typescript = require('gulp-typescript');
     var tscConfig = require('./tsconfig.json');
 
     var tsResult = gulp
         .src(PATHS.src)
+        .pipe(sourcemaps.init())
         .pipe(typescript(tscConfig.compilerOptions));
 
-    return tsResult.js.pipe(gulp.dest('dist'));
+    return tsResult.js.pipe(sourcemaps.write('./', {
+            sourceRoot: __dirname + '/src'
+        })).pipe(gulp.dest('dist'));
 });
 
 gulp.task('play', ['ts2js'], function () {
