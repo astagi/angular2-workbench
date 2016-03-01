@@ -28,6 +28,12 @@ WARNING: atm this is a non-sense app, elements are taken from different projects
 
     $ gulp test
 
+## Get html coverage output
+
+    $ gulp html-cov
+
+And then open coverage/index.html file
+
 ## Resources
 
 - http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html
