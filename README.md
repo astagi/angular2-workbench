@@ -37,6 +37,7 @@ And then open coverage/index.html file
 ## Resources
 
 - http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html
+- http://twofuckingdevelopers.com/2016/01/testing-angular-2-with-karma-and-jasmine/
 - http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2
 - http://www.syntaxsuccess.com/viewarticle/angular-2.0-input-values-and-binding
 - https://auth0.com/blog/2015/10/15/angular-2-series-part-3-using-http/
