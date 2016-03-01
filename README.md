@@ -8,11 +8,11 @@ Workbench for Angular 2, including experiments with
 - custom pipes
 - routing
 - http requests
-- testing
+- testing and coverage
 
 and much more..
 
-WARNING: this is a non-sense app, elements are taken from different projects.
+WARNING: atm this is a non-sense app, elements are taken from different projects.
 
 ## Install
 
