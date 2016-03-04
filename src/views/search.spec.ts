@@ -4,19 +4,19 @@
 import {beforeEachProviders, it, describe, expect, beforeEach, inject, injectAsync, TestComponentBuilder, ComponentFixture} from 'angular2/testing';
 import {MainService} from '../services/main-service';
 import {provide} from 'angular2/core';
-import {YouTubeMp3} from './youtubemp3';
+import {Search} from './search';
 import {Observable}     from 'rxjs/Observable';
 import { HTTP_PROVIDERS } from 'angular2/http';
 
 
 class MockMainService extends MainService {
-  getMusicLink(videoUrl: string) {
+  searchSongs(query: string) {
     return new Observable(observer =>
-          observer.next('Hola')).share();
+      observer.next([{'title': 'TTT', 'authors' : 'AAA'}])).share();
   }
 }
 
-describe('YouTubeMp3 Tests', () => {
+describe('Search Tests', () => {
 
   beforeEachProviders(() => [
     HTTP_PROVIDERS,
@@ -26,14 +26,14 @@ describe('YouTubeMp3 Tests', () => {
   it('should change if active', injectAsync([TestComponentBuilder], (tcb) => {
     return tcb
       .overrideProviders(
-        YouTubeMp3, [provide(MainService, { useClass: MockMainService })]
+        Search, [provide(MainService, { useClass: MockMainService })]
       )
-      .createAsync(YouTubeMp3).then((fixture) => {
-        fixture.componentInstance.getMusicLink('url');
-      fixture.detectChanges();
-      let compiled = fixture.debugElement.nativeElement;
-      expect(compiled.outerHTML).toContain('Hola');
-    });
+      .createAsync(Search).then((fixture) => {
+        fixture.componentInstance.search('url');
+        fixture.detectChanges();
+        let compiled = fixture.debugElement.nativeElement;
+        expect(compiled.outerHTML).toContain('TTT');
+      });
   }));
 
 });

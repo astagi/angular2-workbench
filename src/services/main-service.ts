@@ -7,24 +7,18 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class MainService {
-  constructor(@Inject(Http) private http) { }
+  constructor( @Inject(Http) private http) { }
 
-  private _serviceUrl = 'http://www.youtubeinmp3.com/fetch/?format=JSON&video=';
+  private _serviceUrl = '/';
 
-  getFakeElements(query: string) {
-    return new Observable(observer =>
-          observer.next(['Query: ' + query, 'Element 1', 'Element 2', 'Element 3'])).share();
-
-  }
-
-  getMusicLink(videoUrl: string) {
-    return this.http.get(this._serviceUrl + videoUrl)
-      .map(res => res.text())
+  searchSongs(query: string) {
+    return this.http.get(this._serviceUrl + 'dummy_data/songs.json')
+    .map(res => res.json())
       .catch(this.handleError);
   }
 
   private handleError(error: Response) {
     console.error(error);
-    return Observable.throw(error.json().error || 'Server error');
+    return Observable.throw(error || 'Server error');
   }
 }

@@ -1,3 +1,6 @@
-<pixel-switch *ngFor="#pixel of pixels" [pixel]="pixel"></pixel-switch>
-<div *ngFor="#pixel of pixels">{{pixel.value | not}}</div>
-<youtubemp3></youtubemp3>
+<div>
+<span>Pixel row: </span><pixel-switch *ngFor="#pixel of pixels" [pixel]="pixel"></pixel-switch>
+</div>
+<div>
+<span>Inverted: </span><span *ngFor="#pixel of pixels">{{(pixel.value | not) ? 1 : 0 }}</span>
+</div>

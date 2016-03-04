@@ -6,10 +6,10 @@ import {LcdChar} from './lcdchar';
 
 describe('LcdChar', () => {
 
-    let app: LcdChar;
+  let app: LcdChar;
 
   beforeEach(function() {
-      app = new LcdChar();
+    app = new LcdChar();
   });
 
   it('should have name property', function() {

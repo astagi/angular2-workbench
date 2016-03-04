@@ -16,6 +16,15 @@ export class SearchTestBox {}
 
 describe('FocusMe attribute directive Tests', () => {
 
+  beforeEach(function() {
+    jasmine.clock().uninstall();
+    jasmine.clock().install();
+  });
+
+  afterEach(function() {
+    jasmine.clock().uninstall();
+  });
+
   it('should have the input focused', injectAsync([TestComponentBuilder], (tcb) => {
     return tcb.createAsync(SearchTestBox).then((fixture) => {
       fixture.detectChanges();
@@ -26,6 +35,7 @@ describe('FocusMe attribute directive Tests', () => {
       setTimeout(() => {
         expect(input.focus).toHaveBeenCalled();
       }, 100);
+      jasmine.clock().tick(101);
 
     });
   }));

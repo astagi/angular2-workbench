@@ -10,10 +10,10 @@ import {MainService} from './main-service';
 import {provide} from 'angular2/core';
 
 class MockMainService extends MainService {
-  getMusicLink(videoUrl: string) {
+    searchSongs(query: string) {
       return new Observable(observer =>
-            observer.next('Hola')).share();
-  }
+            observer.next([{'title': 'TTT', 'authors' : 'AAA'}])).share();
+    }
 }
 
 describe('MainService', () => {
@@ -25,13 +25,15 @@ describe('MainService', () => {
 
   it('should work', inject([MainService], (testService: MainService) => {
 
-    testService.getMusicLink('url').subscribe(
+    testService.searchSongs('my song').subscribe(
       (data) => {
-        expect(data).toBe('Hola');
+        expect(data[0].title).toBe('TTT');
       },
       (error) => {
-         fail(error);
-      });
+       fail(error);
+      }
+    );
+
   }));
 
 });
