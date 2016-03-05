@@ -12,7 +12,7 @@ export class MainService {
   private _serviceUrl = '/';
 
   searchSongs(query: string) {
-    return this.http.get(this._serviceUrl + 'dummy_data/songs.json')
+    return this.http.get(this._serviceUrl + 'server/songs.json')
     .map(res => res.json())
       .catch(this.handleError);
   }
