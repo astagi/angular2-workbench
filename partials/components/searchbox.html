@@ -1,2 +1,2 @@
-<input [value]="value" type="text" (input)="search($event.target.value)" focusMe/>
+<input #searchinput [value]="value" type="text" (input)="search($event.target.value)" focusMe/>
 <span (click)="reset()">X</span>
