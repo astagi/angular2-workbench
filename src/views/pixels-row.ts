@@ -5,12 +5,12 @@ import {Pixel} from '../models/pixel';
 
 
 @Component({
-  selector: 'lcdchar',
+  selector: 'pixelsrow',
   directives: [PixelSwitch],
   pipes: [NotPipe],
-  templateUrl: '/partials/views/lcdchar.html'
+  templateUrl: '/partials/views/pixels-row.html'
 
 })
-export class LcdChar {
+export class PixelsRow {
   pixels: Pixel[] = [new Pixel(false), new Pixel(false), new Pixel(false)];
 }

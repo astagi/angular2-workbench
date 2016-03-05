@@ -2,18 +2,18 @@
 
 
 import {it, describe, expect, beforeEach, inject} from 'angular2/testing';
-import {LcdChar} from './lcdchar';
+import {PixelsRow} from './pixels-row';
 
-describe('LcdChar', () => {
+describe('PixelsRow', () => {
 
-  let app: LcdChar;
+  let component: PixelsRow;
 
   beforeEach(function() {
-    app = new LcdChar();
+    component = new PixelsRow();
   });
 
   it('should have name property', function() {
-    expect(app.pixels[0].value).toBe(false);
+    expect(component.pixels[0].value).toBe(false);
   });
 
 });
