@@ -1,6 +1,6 @@
 <div>
-<span>Pixel row: </span><pixel-switch *ngFor="#pixel of pixels" [pixel]="pixel"></pixel-switch>
+<span style='display: inline-block; width: 100px;'>Pixel row: </span><pixel-switch *ngFor="#pixel of pixels" [pixel]="pixel"></pixel-switch>
 </div>
 <div>
-<span>Inverted: </span><span *ngFor="#pixel of pixels">{{(pixel.value | not) ? 1 : 0 }}</span>
+<span style='display: inline-block; width: 100px;'>Inverted: </span><span *ngFor="#pixel of pixels">{{(pixel.value | not) ? 1 : 0 }} </span>
 </div>
