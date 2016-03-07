@@ -49,6 +49,7 @@ And then open coverage/index.html file
 - http://www.yearofmoo.com/2016/02/rendering-in-angular2.html
 - http://blog.scottlogic.com/2015/12/24/creating-an-angular-2-build.html
 - https://developers.livechatinc.com/blog/testing-angular-2-apps-part-1-beginning/
+- https://github.com/ng-ramen/ng-ramen-2
 - http://definitelytyped.org/
 
 ## License
