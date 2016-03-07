@@ -1,5 +1,5 @@
 module.exports = function(config) {
-    config.set({
+    var configuration = {
 
         basePath: '.',
 
@@ -65,6 +65,19 @@ module.exports = function(config) {
             ]
         },
 
+        customLaunchers: {
+            Chrome_travis_ci: {
+                base: 'Firefox',
+            }
+        },
+
         singleRun: true
-    })
+    };
+
+    if(process.env.TRAVIS){
+        configuration.browsers = ['Chrome_travis_ci'];
+    }
+
+    config.set(configuration);
+
 };
