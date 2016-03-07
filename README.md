@@ -1,5 +1,7 @@
 # Angular 2 workbench
 
+[![Build Status](https://secure.travis-ci.org/astagi/angular2-workbench.svg)](https://travis-ci.org/astagi/angular2-workbench) [![Coverage Status](https://coveralls.io/repos/astagi/angular2-workbench/badge.svg?branch=master)](https://coveralls.io/r/astagi/angular2-workbench?branch=master)
+
 Workbench for Angular 2, including experiments with
 
 - custom components
